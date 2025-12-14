@@ -1,5 +1,8 @@
-
 // import styles from "./DockMenu.module.css";
+
+import { VscHome, VscArchive } from "react-icons/vsc";
+import { TbListDetails } from "react-icons/tb";
+import { MdOutlineWorkHistory } from "react-icons/md";
 
 import {
   motion,
@@ -8,6 +11,7 @@ import {
   useTransform,
   AnimatePresence,
 } from "motion/react";
+
 import {
   Children,
   cloneElement,
@@ -103,7 +107,7 @@ function DockIcon({ children, className = "" }) {
   return <div className={`dock-icon ${className}`}>{children}</div>;
 }
 
-export default function Dock({
+function Dock({
   items,
   className = "",
   spring = { mass: 0.1, stiffness: 150, damping: 12 },
@@ -159,5 +163,41 @@ export default function Dock({
         ))}
       </motion.div>
     </motion.div>
+  );
+}
+
+export default function DockMenu() {
+  const items = [
+    {
+      icon: <VscHome size={18} />,
+      label: "Home",
+      onClick: () => alert("Home!"),
+    },
+    {
+      icon: <VscArchive size={18} />,
+      label: "Projects!",
+      onClick: () => alert("Projects!"),
+    },
+    {
+      icon: <TbListDetails size={18} />,
+      label: "Resume!",
+      onClick: () => alert("Resume!"),
+    },
+    {
+      icon: <MdOutlineWorkHistory size={18} />,
+      label: "Experience!",
+      onClick: () => alert("Experience!"),
+    },
+  ];
+  return (
+    <>
+      <Dock
+        items={items}
+        panelHeight={68}
+        baseItemSize={50}
+        magnification={70}
+      />
+      ;
+    </>
   );
 }
