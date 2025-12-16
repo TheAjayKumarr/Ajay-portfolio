@@ -1,8 +1,8 @@
 // import styles from "./DockMenu.module.css";
-
 import { VscHome, VscArchive } from "react-icons/vsc";
 import { TbListDetails } from "react-icons/tb";
 import { MdOutlineWorkHistory } from "react-icons/md";
+import DockPortal from "./DockPortal";
 
 import {
   motion,
@@ -167,6 +167,38 @@ function Dock({
 }
 
 export default function DockMenu() {
+  const [visible, setVisible] = useState(true);
+  let lastScrollY = useRef(0);
+
+  useEffect(() => {
+    let ticking = false;
+
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentY = window.scrollY;
+          const diff = currentY - lastScrollY.current;
+
+          if (diff > 15) {
+            // scrolled DOWN enough
+            setVisible(false);
+          } else if (diff < -15) {
+            // scrolled UP enough
+            setVisible(true);
+          }
+
+          lastScrollY.current = currentY;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const items = [
     {
       icon: <VscHome size={18} />,
@@ -191,13 +223,21 @@ export default function DockMenu() {
   ];
   return (
     <>
-      <Dock
-        items={items}
-        panelHeight={68}
-        baseItemSize={50}
-        magnification={70}
-      />
-      ;
+      <motion.div
+        initial={{ y: -80, opacity: 0 }}
+        animate={{
+          y: visible ? 0 : -80,
+          opacity: visible ? 1 : 0,
+        }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
+      >
+        <Dock
+          items={items}
+          panelHeight={68}
+          baseItemSize={50}
+          magnification={70}
+        />
+      </motion.div>
     </>
   );
 }

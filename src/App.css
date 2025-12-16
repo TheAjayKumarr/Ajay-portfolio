@@ -6,7 +6,7 @@
 
 .tilted-card-demo-text {
   text-transform: capitalize;
-  color: #fff;
+  color: rgb(0, 16, 0);
   letter-spacing: -.5px;
   background: #0006;
   border-radius: 15px;

@@ -5,8 +5,12 @@ import DockMenu from "./components/DockMenu";
 function App() {
   return (
     <>
-      <Hero />
       <DockMenu />
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />
+      <Hero />  
     </>
   );
 }

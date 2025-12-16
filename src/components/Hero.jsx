@@ -1,20 +1,8 @@
-import { useState } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import TiltedCard from "./TitledCard";
 import Ajay from "../assets/Ajay.png";
-import logo from "../assets/bhaibhaiLogo.png";
-
-const navigation = [
-  { name: "Experience", href: "#" },
-  { name: "Projects", href: "#" },
-  { name: "Resume", href: "#" },
-  { name: "Contact", href: "#" },
-];
+import Ajay_2 from "../assets/Ajay_2.png";
 
 export default function Hero() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <div className="bg-zinc-400  dark:not-white-green-bg">
       <header className="absolute inset-x-0 top-0 z-50">
@@ -94,7 +82,7 @@ export default function Hero() {
         </Dialog> */}
       </header>
 
-      <div className="relative isolate px-6 pt-20 lg:px-8">
+      <div className="relative isolate px-6 pt-32 lg:px-8">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -109,7 +97,7 @@ export default function Hero() {
         </div>
         <div className="flex justify-center">
           <TiltedCard
-            imageSrc={Ajay}
+            imageSrc={Ajay_2}
             altText="Ajay's Image"
             captionText="Ajay Kumar"
             containerHeight="300px"
@@ -123,7 +111,7 @@ export default function Hero() {
             displayOverlayContent={true}
             overlayContent={
               <div className="tilted-card-overlay">
-                <p className="tilted-card-demo-text ">Ajay Kumar</p>
+                {/* <p className="tilted-card-demo-text ">Ajay Kumar</p> */}
               </div>
             }
           />
