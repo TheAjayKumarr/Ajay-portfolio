@@ -1,135 +1,189 @@
 import TiltedCard from "./TitledCard";
-import Ajay from "../assets/Ajay.png";
 import Ajay_2 from "../assets/Ajay_2.png";
+import TextPressure from "./Intro";
 
 export default function Hero() {
   return (
-    <div className="bg-zinc-400  dark:not-white-green-bg">
-      <header className="absolute inset-x-0 top-0 z-50">
-        {/* <nav
-          aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
-        >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img alt="" src={logo} className="h-8 w-auto" />
-            </a>
-          </div>
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="size-6" />
-            </button>
-          </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm/6 font-semibold text-emerald-950"
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </nav>
-        <Dialog
-          open={mobileMenuOpen}
-          onClose={setMobileMenuOpen}
-          className="lg:hidden"
-        >
-          <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img
-                  alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                  className="h-8 w-auto"
-                />
-              </a>
-              <button
-                type="button"
-                onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-200"
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="size-6" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-white/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </DialogPanel>
-        </Dialog> */}
-      </header>
+    // <section className="bg-zinc-400 overflow-hidden">
+    //   <div className="px-6 pt-24">
+    //     {/* HERO WRAPPER */}
+    //     <div className="mx-auto max-w-7xl">
+    //       {/* MOBILE → STACKED */}
+    //       <div className="flex flex-col items-center gap-6 lg:hidden">
+    //         <h1 className="bbh-bartle-regular text-[50px] scale-y-110">Ajay</h1>
 
-      <div className="relative isolate px-6 pt-32 lg:px-8">
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        >
-          <div
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
-          />
-        </div>
-        <div className="flex justify-center">
-          <TiltedCard
-            imageSrc={Ajay_2}
-            altText="Ajay's Image"
-            captionText="Ajay Kumar"
-            containerHeight="300px"
-            containerWidth="300px"
-            imageHeight="300px"
-            imageWidth="300px"
-            rotateAmplitude={12}
-            scaleOnHover={1.2}
-            showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
-            overlayContent={
-              <div className="tilted-card-overlay">
-                {/* <p className="tilted-card-demo-text ">Ajay Kumar</p> */}
+    //         <TiltedCard
+    //           imageSrc={Ajay_2}
+    //           altText="Ajay"
+    //           containerHeight="260px"
+    //           containerWidth="260px"
+    //           imageHeight="260px"
+    //           imageWidth="260px"
+    //           rotateAmplitude={10}
+    //           scaleOnHover={1.1}
+    //           showMobileWarning={false}
+    //           showTooltip={false}
+    //           displayOverlayContent={false}
+    //         />
+
+    //         <h1 className="bbh-bartle-regular text-[50px] scale-y-110">
+    //           Kumar
+    //         </h1>
+    //       </div>
+
+    //       {/* DESKTOP → SIDE BY SIDE */}
+    //       {/* <div className="relative hidden lg:flex items-center justify-center gap-10 top-8 left-[4.5%]">
+    //         <div className="h-[300px] flex items-center">
+    //           <h1 className="bbh-bartle-regular text-[60px] scale-y-[7]">
+    //             Ajay
+    //           </h1>
+    //         </div>
+
+    //         <TiltedCard
+    //           imageSrc={Ajay_2}
+    //           altText="Ajay"
+    //           containerHeight="300px"
+    //           containerWidth="300px"
+    //           imageHeight="300px"
+    //           imageWidth="300px"
+    //           rotateAmplitude={12}
+    //           scaleOnHover={1.15}
+    //           showMobileWarning={false}
+    //           showTooltip={false}
+    //           displayOverlayContent={false}
+    //         />
+
+    //         <div className="h-[300px] flex items-center">
+    //           <h1 className="bbh-bartle-regular text-[60px] scale-y-[7]">
+    //             Kumar
+    //           </h1>
+    //         </div>
+    //       </div> */}
+    //       {/* DESKTOP → SIDE BY SIDE */}
+    //       <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center gap-8">
+    //         {/* LEFT TEXT PRESSURE */}
+    //         <div className="h-[300px]">
+    //           <TextPressure
+    //             text="Ajay"
+    //             flex={false}
+    //             width={true}
+    //             weight={true}
+    //             italic={true}
+    //             alpha={false}
+    //             stroke={false}
+    //             textColor="#000000"
+    //             minFontSize={60}
+    //           />
+    //         </div>
+
+    //         {/* IMAGE */}
+    //         <TiltedCard
+    //           imageSrc={Ajay_2}
+    //           altText="Ajay"
+    //           containerHeight="300px"
+    //           containerWidth="300px"
+    //           imageHeight="300px"
+    //           imageWidth="300px"
+    //           rotateAmplitude={12}
+    //           scaleOnHover={1.15}
+    //           showMobileWarning={false}
+    //           showTooltip={false}
+    //           displayOverlayContent={false}
+    //         />
+
+    //         {/* RIGHT TEXT PRESSURE */}
+    //         <div className="h-[300px]">
+    //           <TextPressure
+    //             text="Kumar"
+    //             flex={false}
+    //             width={true}
+    //             weight={true}
+    //             italic={true}
+    //             alpha={false}
+    //             stroke={false}
+    //             textColor="#000000"
+    //             minFontSize={60}
+    //           />
+    //         </div>
+    //       </div>
+    //     </div>
+    //     <div className="h-32" />
+    //   </div>
+    // </section>
+    <section className="bg-zinc-400 overflow-hidden">
+      <div className="px-6 pt-32">
+        <div className="mx-auto max-w-7xl">
+          {/* ================= MOBILE ONLY ================= */}
+          <div className="block lg:hidden">
+            <div className="flex flex-col items-center gap-6">
+              <h1 className="bbh-bartle-regular text-[50px] scale-y-[3]">
+                Ajay
+              </h1>
+
+              <TiltedCard
+                imageSrc={Ajay_2}
+                altText="Ajay"
+                containerHeight="260px"
+                containerWidth="260px"
+                imageHeight="260px"
+                imageWidth="260px"
+                rotateAmplitude={10}
+                scaleOnHover={1.1}
+                showMobileWarning={false}
+                showTooltip={false}
+                displayOverlayContent={false}
+              />
+
+              <h1 className="bbh-bartle-regular text-[50px] scale-y-[3]">
+                Kumar
+              </h1>
+            </div>
+          </div>
+
+          {/* ================= DESKTOP ONLY ================= */}
+          <div className="hidden lg:block">
+            <div className="grid grid-cols-[1fr_300px_1fr] items-center h-[300px] gap-10">
+              <div className="h-full">
+                <TextPressure
+                  text="AJAY"
+                  minFontSize={60}
+                  weight
+                  width
+                  italic
+                  textColor="rgb(0, 16, 0)"
+                />
               </div>
-            }
-          />
+
+              <TiltedCard
+                imageSrc={Ajay_2}
+                altText="Ajay"
+                containerHeight="300px"
+                containerWidth="300px"
+                imageHeight="300px"
+                imageWidth="300px"
+                rotateAmplitude={12}
+                scaleOnHover={1.15}
+                showMobileWarning={false}
+                showTooltip={false}
+                displayOverlayContent={false}
+              />
+
+              <div className="h-full">
+                <TextPressure
+                  text="KUMAR"
+                  minFontSize={60}
+                  weight
+                  width
+                  italic
+                  textColor="rgb(0, 16, 0)"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56"></div>
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        >
-          <div
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
-          />
-        </div>
+
+        <div className="h-32" />
       </div>
-    </div>
+    </section>
   );
 }
