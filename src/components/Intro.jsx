@@ -46,6 +46,7 @@ const TextPressure = ({
   const containerRef = useRef(null);
   const titleRef = useRef(null);
   const spansRef = useRef([]);
+  spansRef.current = [];
 
   const mouseRef = useRef({ x: 0, y: 0 });
   const cursorRef = useRef({ x: 0, y: 0 });
@@ -54,7 +55,8 @@ const TextPressure = ({
   const [scaleY, setScaleY] = useState(1);
   const [lineHeight, setLineHeight] = useState(1);
 
-  const chars = text.split("");
+  const lines = text.split("\n");
+  const longestLineLength = Math.max(...lines.map((line) => line.length || 1));
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -91,7 +93,7 @@ const TextPressure = ({
     const { width: containerW, height: containerH } =
       containerRef.current.getBoundingClientRect();
 
-    let newFontSize = containerW / (chars.length / 2);
+    let newFontSize = containerW / (longestLineLength / 1.8);
     newFontSize = Math.max(newFontSize, minFontSize);
 
     setFontSize(newFontSize);
@@ -108,7 +110,7 @@ const TextPressure = ({
         setLineHeight(yRatio);
       }
     });
-  }, [chars.length, minFontSize, scale]);
+  }, [longestLineLength, minFontSize, scale]);
 
   useEffect(() => {
     const debouncedSetSize = debounce(setSize, 100);
@@ -170,10 +172,7 @@ const TextPressure = ({
           font-style: normal;
         }
 
-        .flex {
-          display: flex;
-          justify-content: space-between;
-        }
+        
 
         .stroke span {
           position: relative;
@@ -222,30 +221,43 @@ const TextPressure = ({
         style={{
           fontFamily,
           textTransform: "uppercase",
-          fontSize: "300px",
+          fontSize: "150px",
           lineHeight,
           transform: `scale(1, ${scaleY})`,
-          transformOrigin: "center",
+          transformOrigin: "left center",
           margin: 0,
-          textAlign: "center",
           userSelect: "none",
-          whiteSpace: "nowrap",
+          whiteSpace: "pre-line",
           fontWeight: 100,
-          width: "100%",
+          width: "fit-content",
+          textAlign: "left",
         }}
       >
-        {chars.map((char, i) => (
-          <span
-            key={i}
-            ref={(el) => (spansRef.current[i] = el)}
-            data-char={char}
+        {lines.map((line, lineIndex) => (
+          <div
+            key={lineIndex}
             style={{
-              display: "inline-block",
-              color: stroke ? undefined : textColor,
+              display: "flex",
+              justifyContent: "center",
             }}
           >
-            {char}
-          </span>
+            {line.split("").map((char, charIndex) => {
+              const spanIndex = `${lineIndex}-${charIndex}`;
+              return (
+                <span
+                  key={spanIndex}
+                  ref={(el) => spansRef.current.push(el)}
+                  data-char={char}
+                  style={{
+                    display: "inline-block",
+                    color: stroke ? undefined : textColor,
+                  }}
+                >
+                  {char}
+                </span>
+              );
+            })}
+          </div>
         ))}
       </h1>
     </div>

@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+.back-color{
+  background-color: #41495c66;
+}
+
 .tilted-card-demo-text {
   text-transform: capitalize;
   color: rgb(0, 16, 0);
@@ -33,6 +37,21 @@
   font-weight: 400;
   font-style: normal;
   color: rgb(0, 16, 0);
+}
+
+.wave-bg {
+  width: 100px;
+  height: 100px;
+  background-image: url("https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Fallback if WebP not supported */
+@supports not (background-image: url("test.webp")) {
+  .wave-bg {
+    background-image: url("https://fonts.gstatic.com/s/e/notoemoji/latest/1f44b_1f3fb/512.gif");
+  }
 }
 
 
