@@ -1,6 +1,5 @@
 import TiltedCard from "./TitledCard";
 import Ajay_2 from "../assets/Ajay_2.png";
-import TextPressure from "./Intro";
 
 export default function Hero() {
   return (
@@ -31,8 +30,19 @@ export default function Hero() {
               <h1 className="bbh-bartle-regular text-[50px] scale-y-[3]">
                 Kumar
               </h1>
+              <div
+                className="
+                    front-md
+                    z-0 w-[250px] font-bold [-webkit-text-stroke:0.5px_black]
+                    pointer-events-none
+                    uppercase text-orange-600  
+                  "
+              >
+                Frontend Developer
+              </div>
             </div>
-            <div className="max-w-3xl m-auto pt-8 text-justify">
+
+            <div className="max-w-3xl m-auto pt-4 text-justify">
               <p>
                 Hey, I am a <strong> B.Tech graduate</strong> in{" "}
                 <b>Computer Science and Business Systems </b>
@@ -57,7 +67,7 @@ export default function Hero() {
 
           {/* ================= DESKTOP ONLY ================= */}
           <div className="hidden lg:block justify-center ">
-            <div className="grid grid-cols-2 items-center h-[300px] gap-10 justify-center justify-items-center  max-w-4xl m-auto">
+            <div className="grid grid-cols-2 items-center h-[300px] gap-10 justify-center justify-items-center  max-w-4xl m-auto ">
               {/* <div className="relative text-5xl inline-block">
                 
                 <div
@@ -94,6 +104,18 @@ export default function Hero() {
                 showTooltip={false}
                 displayOverlayContent={false}
               />
+              <div
+                className="
+                    absolute front
+                    bg-contain bg-no-repeat
+                    
+                    z-0 w-[296px] font-bold [-webkit-text-stroke:0.5px_black]
+                    pointer-events-none
+                    uppercase text-orange-600  rotate-[-90deg]
+                  "
+              >
+                Frontend Developer
+              </div>
 
               <div className=" grid grid-rows-2 h-[300px] items-center gap-0 pt-1">
                 {/* <TextPressure
@@ -117,13 +139,10 @@ export default function Hero() {
               <p>
                 Hey, I am a 2024 <strong> B.Tech graduate</strong> in{" "}
                 <b>Computer Science and Business Systems </b>
-                from <i>Bharati Vidyapeeth College of Engineering, Pune</i>,
-                originally from{" "}
-                <i>
-                  MP, <b>India</b>
-                </i>
-                . I am a <b>frontend-focused developer</b> with hands-on
-                experience in{" "}
+                from <i>
+                  Bharati Vidyapeeth College of Engineering, Pune
+                </i>, <b>India</b>. I am a <b>frontend-focused developer</b>{" "}
+                with hands-on experience in{" "}
                 <b>
                   <i>HTML, CSS, JavaScript, React, </i>{" "}
                 </b>
@@ -138,14 +157,22 @@ export default function Hero() {
                   <i>Python, CNNs, & deep learning</i>
                 </b>
                 , and I enjoy building scalable web interfaces backed by
-                data-driven thinking. I’m <b>actively seeking opportunities</b>{" "}
-                where I can contribute, learn, and grow as a developer.
+                data-driven thinking. <br />
+                <a
+                  href="mailto:ajay.kumar.candidate@gmail.com?subject=Potential Opportunity – Frontend / Software Developer"
+                  className=" flex font-bold text-xl p-0.5 justify-center mt-3  border-2 border-b-orange-500 border-r-orange-500 rounded-lg "
+                >
+                  <span className=" transition-transform duration-300 ease-out hover:scale-110">
+                    Actively seeking opportunities
+                  </span>
+                </a>
               </p>
             </div>
+            <div className="h-32 max-w-4xl"></div>
           </div>
         </div>
 
-        <div className="h-32" />
+        {/* <div className="h-32" /> */}
       </div>
     </section>
   );

@@ -10,7 +10,18 @@
 html {
   scroll-behavior: smooth;
 }
+.front{
+  letter-spacing: 0.55em;
+  font-size: 1.8rem;
+  line-height: 3rem;
 
+}
+.front-md{
+  letter-spacing: 0.55em;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+}
 .tilted-card-demo-text {
   text-transform: capitalize;
   color: rgb(0, 16, 0);
