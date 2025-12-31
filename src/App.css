@@ -5,7 +5,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 .back-color{
-  background-color: #c9aed3;
+  background-color: #ffffff;
 }
 html {
   scroll-behavior: smooth;
@@ -16,6 +16,11 @@ html {
   line-height: 3rem;
 
 }
+
+.custom-icon:hover {
+  color: rgb(249 115 22 / var(--tw-border-opacity, 1)) /* #f97316 */;
+}
+
 .front-md{
   letter-spacing: 0.55em;
   font-size: 1.5rem;

@@ -4,6 +4,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { MdMailOutline } from "react-icons/md";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Hero() {
   const socials = [
@@ -27,7 +28,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="back-color overflow-hidden">
+    <section className="back-color overflow-hidden h-dvh">
       <div className="px-6 pt-32">
         <div className="mx-auto max-w-7xl">
           {/* ================= MOBILE ONLY ================= */}
@@ -83,9 +84,37 @@ export default function Hero() {
                   <i>Python, CNNs, and deep learning</i>
                 </b>
                 , and I enjoy building scalable web interfaces backed by
-                data-driven thinking. I’m <b>actively seeking opportunities</b>{" "}
-                where I can contribute, learn, and grow as a developer.
+                data-driven thinking. <br />
+                <a
+                  href="mailto:ajay.kumar.candidate@gmail.com?subject=Potential Opportunity – Frontend / Software Developer"
+                  className=" flex font-bold text-xl p-0.5 justify-center mt-3  border-2 border-t-black border-l-black border-b-orange-500 border-r-orange-500 rounded-lg hover:shadow-md hover:shadow-blue-900"
+                >
+                  <span className=" transition-transform duration-300 ease-out hover:scale-110 flex justify-center min-w-full">
+                    Actively seeking opportunities
+                  </span>
+                </a>
               </p>
+            </div>
+            <div className="grid max-w-3xl grid-cols-2 m-auto mt-4">
+              <div className="grid grid-cols-[54px_minmax(0,_1fr)]">
+                <div className="flex justify-center align-middle h-11 w-11 items-center border border-black rounded-md hover:scale-110 transition-transform duration-300 hover:border-orange-500 hover:shadow-md hover:shadow-blue-900 custom-icon">
+                  {<IoLocationOutline size={18} />}
+                </div>
+                <div className="flex items-center h-11">Dewas, MP, India</div>
+              </div>
+
+              <div className=" flex  justify-end gap-4  pb-8 ">
+                {socials.map((item, index) => (
+                  <button
+                    key={index}
+                    onClick={item.onclick}
+                    className="p-3 rounded-md border-black border hover:scale-110 transition-transform duration-300 hover:border-orange-500 hover:shadow-md hover:shadow-blue-900 custom-icon  "
+                    aria-label={item.label}
+                  >
+                    {item.icon}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -151,10 +180,18 @@ export default function Hero() {
                   italic
                   textColor="rgb(0, 16, 0)"
                 /> */}
-                <h1 className="bbh-bartle-regular text-[48px] scale-y-[4.2] ">
-                  Ajay
-                </h1>
-                <h1 className="bbh-bartle-regular text-[48px] scale-y-[4.2] ">
+                <div>
+                  <h1 className="bbh-bartle-regular text-[46px] scale-y-[4.5] ">
+                    Ajay
+                    {/* <DotLottieReact
+                      src="https://lottie.host/7177a91a-0467-4723-84ea-001e2d99d028/r3qnzAsSon.lottie"
+                      loop
+                      autoplay
+                      style={{ width: "30px", height: "30px" }}
+                    /> */}
+                  </h1>
+                </div>
+                <h1 className="bbh-bartle-regular text-[46px] scale-y-[4.5] ">
                   Kumar
                 </h1>
               </div>
@@ -184,19 +221,23 @@ export default function Hero() {
                 data-driven thinking. <br />
                 <a
                   href="mailto:ajay.kumar.candidate@gmail.com?subject=Potential Opportunity – Frontend / Software Developer"
-                  className=" flex font-bold text-xl p-0.5 justify-center mt-3  border-2 border-t-black border-l-black border-b-orange-500 border-r-orange-500 rounded-lg "
+                  className=" flex font-bold text-xl p-0.5 justify-center mt-3  border-2 border-t-black border-l-black border-b-orange-500 border-r-orange-500 rounded-lg hover:shadow-md hover:shadow-blue-900"
                 >
-                  <span className=" transition-transform duration-300 ease-out hover:scale-110 ">
+                  <span className=" transition-transform duration-300 ease-out hover:scale-110 flex justify-center min-w-full">
                     Actively seeking opportunities
                   </span>
                 </a>
               </p>
             </div>
             <div className="grid max-w-3xl grid-cols-2 m-auto">
-              <div className="grid grid-cols-[54px_minmax(0,_1fr)_100px]">
-                <div className="flex justify-center align-middle h-11 w-11 items-center border border-black rounded-md ">
-                  {<IoLocationOutline size={18} className="" />}
-                </div>
+              <div className="grid grid-cols-[54px_minmax(0,_1fr)]">
+                <a
+                  href="https://maps.app.goo.gl/oxKeV1C21XwP4awF8"
+                  target="_blank"
+                  className="flex justify-center align-middle h-11 w-11 items-center border border-black rounded-md hover:scale-110 transition-transform duration-300 hover:border-orange-500 hover:shadow-md hover:shadow-blue-900 custom-icon"
+                >
+                  {<IoLocationOutline size={18} />}
+                </a>
                 <div className="flex items-center h-11">
                   Dewas, Madhya Pradesh, India
                 </div>
@@ -207,7 +248,7 @@ export default function Hero() {
                   <button
                     key={index}
                     onClick={item.onclick}
-                    className="p-3 rounded-md border-black border hover:scale-110 transition-transform duration-300   "
+                    className="p-3 rounded-md border-black border hover:scale-110 transition-transform duration-300 hover:border-orange-500 hover:shadow-md hover:shadow-blue-900 custom-icon  "
                     aria-label={item.label}
                   >
                     {item.icon}
