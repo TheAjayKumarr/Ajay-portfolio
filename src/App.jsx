@@ -17,7 +17,6 @@ function App() {
       <section id="projects">
         <Projects />
       </section>
-
       <section id="resume">
         <Resume />
       </section>

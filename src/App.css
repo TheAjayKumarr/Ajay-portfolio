@@ -4,6 +4,60 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+.tiptext {
+  color:#069; 
+  cursor:pointer;
+}
+.description {
+  display:none;
+  position:absolute;
+  border:1px solid #000;
+  width:400px;
+  height:400px;
+}
+
+.gradient-fade {
+  /* Remove default border and set height */
+  border: none;
+  height: 1px; /* Adjust thickness as needed */
+  margin: 30px 0; /* Add some vertical spacing */
+  
+  /* Apply a linear gradient background */
+  background-image: linear-gradient(to right, 
+    rgba(0, 0, 0, 0) 0%,        /* Transparent at the start (left) */
+    rgba(255, 255, 255) 50%,     /* Solid color/opacity in the middle */
+    rgba(0, 0, 0, 0) 100%       /* Transparent at the end (right) */
+  )
+}
+.gradient-fade-bottom {
+  /* Remove default border and set height */
+  border: none;
+  height: .5px; /* Adjust thickness as needed */
+  margin: 0 0 30px 0; /* Add some vertical spacing */
+  
+  /* Apply a linear gradient background */
+  background-image: linear-gradient(to right, 
+    rgba(0, 0, 0, 0) 0%,        /* Transparent at the start (left) */
+    rgba(255, 255, 255) 50%,     /* Solid color/opacity in the middle */
+    rgba(0, 0, 0, 0) 100%       /* Transparent at the end (right) */
+  )
+}
+
+.gradient-fade-top {
+  /* Remove default border and set height */
+  border: none;
+  height: .5px; /* Adjust thickness as needed */
+  margin: 30px 0 0 0; /* Add some vertical spacing */
+  
+  /* Apply a linear gradient background */
+  background-image: linear-gradient(to right, 
+    rgba(0, 0, 0, 0) 0%,        /* Transparent at the start (left) */
+    rgba(255, 255, 255) 50%,     /* Solid color/opacity in the middle */
+    rgba(0, 0, 0, 0) 100%       /* Transparent at the end (right) */
+  )
+}
+
+
 .back-color{
   background-color: #ffffff;
 }
