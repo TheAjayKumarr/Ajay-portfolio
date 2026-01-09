@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import "./LinkPreviewer.css";
 
-const LinkPreviewer = ({ href, children, image, title, text }) => {
+const LinkPreviewer = ({ href, children, image, title, text,}) => {
   const previewRef = useRef(null);
 
   useEffect(() => {

@@ -1,6 +1,7 @@
 import ssimage from "D:/AJAY/study/programming/Codes/ithon/Portfolio-Website/src/components/ssimage.jpeg";
 import { LuGithub } from "react-icons/lu";
 import LinkPreviewer from "./LinkPreivew";
+import ProjectItems from "./ProjectItems";
 
 function Projects() {
   return (
@@ -9,8 +10,44 @@ function Projects() {
         <div className="max-w-3xl flex justify-center m-auto text-6xl font-extrabold uppercase pb-12 pt-5 bbh-bartle-regular ">
           <p className="text-white">Projects</p>
         </div>
-
-        <LinkPreviewer
+        <ProjectItems
+          href="https://github.com/TheAjayKumarr"
+          image={ssimage}
+          text="Check my project out"
+          name="Career Blaze"
+          type="Frontend Dev"
+          isFirst
+        />
+        <ProjectItems
+          href="https://github.com/TheAjayKumarr"
+          image={ssimage}
+          text="Check my project out"
+          name="Myntra Clone"
+          type="Frontend Dev"
+        />
+        <ProjectItems
+          href="https://github.com/TheAjayKumarr"
+          image={ssimage}
+          text="Check my project out"
+          name="Myntra Clone"
+          type="Frontend Dev"
+        />
+        <ProjectItems
+          href="https://github.com/TheAjayKumarr"
+          image={ssimage}
+          text="Check my project out"
+          name="Myntra Clone"
+          type="Frontend Dev"
+        />
+        <ProjectItems
+          href="https://github.com/TheAjayKumarr"
+          image={ssimage}
+          text="Check my project out"
+          name="EDA"
+          type="Data Science"
+          isLast
+        />
+        {/* <LinkPreviewer
           href="https://github.com/TheAjayKumarr"
           image="https://images.unsplash.com/photo-1536756300610-6231d68aaf9c"
           text="Explore my projects and code"
@@ -89,7 +126,7 @@ function Projects() {
             </p>
           </div>
           <hr className="gradient-fade" />
-        </LinkPreviewer>
+        </LinkPreviewer> */}
       </div>
     </div>
   );
