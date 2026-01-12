@@ -25,11 +25,7 @@ const ProjectItems = ({
     },
   };
 
-  const position = isFirst
-    ? "first"
-    : isLast
-    ? "last"
-    : "middle";
+  const position = isFirst ? "first" : isLast ? "last" : "middle";
 
   const { top, bottom } = hrStyles[position];
 

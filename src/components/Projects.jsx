@@ -1,132 +1,22 @@
-import ssimage from "D:/AJAY/study/programming/Codes/ithon/Portfolio-Website/src/components/ssimage.jpeg";
 import { LuGithub } from "react-icons/lu";
-import LinkPreviewer from "./LinkPreivew";
 import ProjectItems from "./ProjectItems";
+import projects from "./projectsdata";
 
 function Projects() {
   return (
     <div className="overflow-hidden bg-gray-900  h-dvh text-white">
       <div className=" max-w-4xl  m-auto mt-4 mb-4 pb-2">
         <div className="max-w-3xl flex justify-center m-auto text-6xl font-extrabold uppercase pb-12 pt-5 bbh-bartle-regular ">
-          <p className="text-white">Projects</p>
+          <p className="text-orange-500">Projects</p>
         </div>
-        <ProjectItems
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Check my project out"
-          name="Career Blaze"
-          type="Frontend Dev"
-          isFirst
-        />
-        <ProjectItems
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Check my project out"
-          name="Myntra Clone"
-          type="Frontend Dev"
-        />
-        <ProjectItems
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Check my project out"
-          name="Myntra Clone"
-          type="Frontend Dev"
-        />
-        <ProjectItems
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Check my project out"
-          name="Myntra Clone"
-          type="Frontend Dev"
-        />
-        <ProjectItems
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Check my project out"
-          name="EDA"
-          type="Data Science"
-          isLast
-        />
-        {/* <LinkPreviewer
-          href="https://github.com/TheAjayKumarr"
-          image="https://images.unsplash.com/photo-1536756300610-6231d68aaf9c"
-          text="Explore my projects and code"
-        >
-          <hr className="gradient-fade" />
-          <div className="grid grid-cols-2 max-w-3xl m-auto gap-5 text-justify justify-center">
-            <h2 className="text-4xl font-semibold justify-start flex">
-              CareerBlaze
-            </h2>
-            <p className="text-xl font-semibold justify-end flex items-end">
-              Front-end Develepment
-            </p>
-          </div>
-          <hr className="gradient-fade-top" />
-        </LinkPreviewer>
-        <LinkPreviewer
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Explore my projects and code"
-        >
-          <hr className="gradient-fade-bottom" />
-          <div className="grid grid-cols-2 max-w-3xl m-auto gap-5 text-justify justify-center">
-            <h2 className="text-4xl font-semibold justify-start flex">
-              Myntra-Clone
-            </h2>
-            <p className="text-xl font-semibold justify-end flex items-end">
-              Front-end Develepment
-            </p>
-          </div>
-          <hr className="gradient-fade-top" />
-        </LinkPreviewer>
-        <LinkPreviewer
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Explore my projects and code"
-        >
-          <hr className="gradient-fade-bottom" />
-          <div className="grid grid-cols-2 max-w-3xl m-auto gap-5 text-justify justify-center">
-            <h2 className="text-4xl font-semibold justify-start flex">
-              Myntra-Clone
-            </h2>
-            <p className="text-xl font-semibold justify-end flex items-end">
-              Front-end Develepment
-            </p>
-          </div>
-          <hr className="gradient-fade-top" />
-        </LinkPreviewer>
-        <LinkPreviewer
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Explore my projects and code"
-        >
-          <hr className="gradient-fade-bottom" />
-          <div className="grid grid-cols-2 max-w-3xl m-auto gap-5 text-justify justify-center">
-            <h2 className="text-4xl font-semibold justify-start flex">
-              Myntra-Clone
-            </h2>
-            <p className="text-xl font-semibold justify-end flex items-end">
-              Front-end Develepment
-            </p>
-          </div>
-          <hr className="gradient-fade-top" />
-        </LinkPreviewer>
-        <LinkPreviewer
-          href="https://github.com/TheAjayKumarr"
-          image={ssimage}
-          text="Explore my projects and code"
-        >
-          <hr className="gradient-fade-bottom" />
-          <div className="grid grid-cols-2 max-w-3xl m-auto gap-5 text-justify justify-center">
-            <h2 className="text-4xl font-semibold justify-start flex">
-              Myntra-Clone
-            </h2>
-            <p className="text-xl font-semibold justify-end flex items-end">
-              Front-end Develepment
-            </p>
-          </div>
-          <hr className="gradient-fade" />
-        </LinkPreviewer> */}
+        {projects.map((project, index) => (
+          <ProjectItems
+            key={index}
+            {...project}
+            isFirst={index === 0}
+            isLast={index === projects.length - 1}
+          />
+        ))}
       </div>
     </div>
   );
