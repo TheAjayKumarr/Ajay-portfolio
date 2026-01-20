@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import "./LinkPreviewer.css";
 
-const LinkPreviewer = ({ href, children, image, title, text,}) => {
+const LinkPreviewer = ({ href, children, image, title, text }) => {
   const previewRef = useRef(null);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const LinkPreviewer = ({ href, children, image, title, text,}) => {
 
   return (
     <>
-      <a
+      <div
         href={href}
         className="link-with-preview"
         target="_blank"
@@ -51,13 +51,12 @@ const LinkPreviewer = ({ href, children, image, title, text,}) => {
         onMouseLeave={hidePreview}
       >
         {children}
-      </a>
+      </div>
 
       {/* floating preview */}
       <div ref={previewRef} className="preview-card">
         <img src={image} alt={title} />
         <div className="card-body">
-          <h5>{title}</h5>
           <p>{text}</p>
         </div>
       </div>

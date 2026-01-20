@@ -1,4 +1,4 @@
-import { LuGithub } from "react-icons/lu";
+// import { LuGithub } from "react-icons/lu";
 import ProjectItems from "./ProjectItems";
 import projects from "./projectsdata";
 
@@ -11,8 +11,15 @@ function Projects() {
         </div>
         {projects.map((project, index) => (
           <ProjectItems
-            key={index}
-            {...project}
+            key={project.id}
+            slug={project.slug}
+            name={project.name}
+            image={project.image}
+            text={project.text}
+            type={project.type}
+            description={project.description}
+            github={project.github}
+            tech={project.tech}
             isFirst={index === 0}
             isLast={index === projects.length - 1}
           />
@@ -24,22 +31,22 @@ function Projects() {
 
 export default Projects;
 
-const socials = [
-  {
-    icon: <LuGithub size={18} />,
-    label: "GitHub",
-    onclick: () => window.open("https://github.com/TheAjayKumarr", "_blank"),
-  },
-];
-<div className=" ">
-  {socials.map((item, index) => (
-    <button
-      key={index}
-      onClick={item.onclick}
-      className="hover:scale-125 transition-transform duration-300  custom-icon-reverse  "
-      aria-label={item.label}
-    >
-      {item.icon}
-    </button>
-  ))}
-</div>;
+// const socials = [
+//   {
+//     icon: <LuGithub size={18} />,
+//     label: "GitHub",
+//     onclick: () => window.open("https://github.com/TheAjayKumarr", "_blank"),
+//   },
+// ];
+// <div className=" ">
+//   {socials.map((item, index) => (
+//     <button
+//       key={index}
+//       onClick={item.onclick}
+//       className="hover:scale-125 transition-transform duration-300  custom-icon-reverse  "
+//       aria-label={item.label}
+//     >
+//       {item.icon}
+//     </button>
+//   ))}
+// </div>;
