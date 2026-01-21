@@ -92,7 +92,7 @@ const ProjectsView = () => {
               </div>
 
               {/* Description */}
-              <p className="mt-8 text-lg text-gray-700 text-center text-justify">
+              <p className="mt-8 text-lg text-gray-700 text-justify">
                 {project.description || project.text}
               </p>
 

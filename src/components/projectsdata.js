@@ -48,7 +48,7 @@ const projects = [
     type: "Data Science",
 
   },
-  {id: 6,
+  {id: 5,
     slug: "portfolio-website",
     image: ssimage,
     text: "Check my project out",

@@ -2,6 +2,7 @@
 import { VscHome, VscArchive } from "react-icons/vsc";
 import { TbListDetails } from "react-icons/tb";
 import { MdOutlineWorkHistory } from "react-icons/md";
+import { useLocation, useNavigate } from "react-router";
 
 import {
   motion,
@@ -21,7 +22,6 @@ import {
 } from "react";
 
 import "./Dock.css";
-
 
 function DockItem({
   children,
@@ -47,7 +47,7 @@ function DockItem({
   const targetSize = useTransform(
     mouseDistance,
     [-distance, 0, distance],
-    [baseItemSize, magnification, baseItemSize]
+    [baseItemSize, magnification, baseItemSize],
   );
   const size = useSpring(targetSize, spring);
 
@@ -122,7 +122,7 @@ function Dock({
 
   const maxHeight = useMemo(
     () => Math.max(dockHeight, magnification + magnification / 2 + 4),
-    [magnification, dockHeight]
+    [magnification, dockHeight],
   );
   const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
   const height = useSpring(heightRow, spring);
@@ -170,6 +170,9 @@ export default function DockMenu() {
   const [visible, setVisible] = useState(true);
   let lastScrollY = useRef(0);
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   useEffect(() => {
     let ticking = false;
 
@@ -200,8 +203,15 @@ export default function DockMenu() {
   }, []);
 
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    section?.scrollIntoView({ behavior: "smooth" });
+    // If already on home page → just scroll
+    if (location.pathname === "/") {
+      const section = document.getElementById(id);
+      section?.scrollIntoView({ behavior: "smooth" });
+    }
+    // If on another route → go home first, then scroll
+    else {
+      navigate("/", { state: { scrollTo: id } });
+    }
   };
 
   const items = [
@@ -217,8 +227,8 @@ export default function DockMenu() {
     },
     {
       icon: <TbListDetails size={18} />,
-      label: "Resume",
-      onClick: () => scrollToSection("resume"),
+      label: "Skills",
+      onClick: () => scrollToSection("skills"),
     },
     {
       icon: <MdOutlineWorkHistory size={18} />,

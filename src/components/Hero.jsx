@@ -28,7 +28,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="back-color overflow-hidden h-dvh">
+    <section className="back-color overflow-hidden ">
       <div className="px-6 pt-32">
         <div className="mx-auto max-w-7xl">
           {/* ================= MOBILE ONLY ================= */}
@@ -259,7 +259,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* <div className="h-32" /> */}
+        {/* <div className="h-11" /> */}
       </div>
     </section>
   );

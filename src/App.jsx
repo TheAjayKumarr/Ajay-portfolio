@@ -3,7 +3,6 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import Experience from "./components/Experience";
-import DockMenu from "./components/DockMenu";
 import ProjectsView from "./components/ProjectsView";
 import { Route, Routes } from "react-router";
 import Layout from "./components/Layout";
@@ -25,7 +24,7 @@ function App() {
                 <Projects />
               </section>
 
-              <section id="resume">
+              <section id="skills">
                 <Resume />
               </section>
 
