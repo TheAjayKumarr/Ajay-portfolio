@@ -1,7 +1,7 @@
 import "./App.css";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
-import Resume from "./components/Resume";
+import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import ProjectsView from "./components/ProjectsView";
 import { Route, Routes } from "react-router";
@@ -25,7 +25,7 @@ function App() {
               </section>
 
               <section id="skills">
-                <Resume />
+                <Skills />
               </section>
 
               <section id="experience">

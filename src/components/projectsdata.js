@@ -6,7 +6,7 @@ const projects = [
     slug: "career-blaze",
     name: "Career Blaze",
     image: ssimage,
-    text: "Check my project out",
+    text: "This is a project that I made to practice my frontend react skills. It is a job searching website. In pursuit of searching for jobs and learning front-end dev I thought why not just make a job search portal. It is a simple portal which uses a dataset to load jobs.",
     description: "This is a project that I made to practice my frontend react skills. It is a job searching website. In pursuit of searching for jobs and learning front-end dev I thought why not just make a job search portal. It is a simple portal which uses a dataset to load jobs.",
     tech: ["React", "Tailwind","HTML","CSS","VScode"],
     github: "https://github.com/TheAjayKumarr/Job-Portal",
