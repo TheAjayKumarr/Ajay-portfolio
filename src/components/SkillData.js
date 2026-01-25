@@ -1,54 +1,57 @@
-import ssimage from "D:/AJAY/study/programming/Codes/ithon/Portfolio-Website/src/components/ssimage.jpeg";
+import {
+  SiPython,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiMysql,
+  SiReact,
+  SiTailwindcss,
+  SiBootstrap,
+  SiPandas,
+  SiNumpy,
+  SiTensorflow,
+  SiKeras,
+  SiOpencv,
+  SiGithub,
+  SiGit,
+  SiReplit,
+  SiJupyter,
+} from "react-icons/si";
+import { BiLogoVisualStudio } from "react-icons/bi";
 
-const skill = [
+
+export const skillsData = [
   {
-    id: 1,
-    image: ssimage,
-    name: "React",
-  },
-  {
-    id: 2,
-    image: ssimage,
-    name: "Javascript",
-  },
-  {
-    id: 3,
-    image: ssimage,
-    name: "React",
+    category: "Programming Languages",
+    skills: [
+      { name: "Python", icon: SiPython },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "HTML", icon: SiHtml5 },
+      { name: "CSS", icon: SiCss3 },
+      { name: "SQL", icon: SiMysql },
+    ],
   },
   {
-    id: 4,
-    image: ssimage,
-    name: "React",
-  },
-  {id: 5,
-    image: ssimage,
-    name: "React",
-  },
-  {
-    id: 6,
-    image: ssimage,
-    name: "React",
-  },
-  {
-    id: 7,
-    image: ssimage,
-    name: "React",
+    category: "Libraries & Frameworks",
+    skills: [
+      { name: "React", icon: SiReact },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Bootstrap", icon: SiBootstrap },
+      { name: "Pandas", icon: SiPandas },
+      { name: "NumPy", icon: SiNumpy },
+      { name: "TensorFlow", icon: SiTensorflow },
+      { name: "Keras", icon: SiKeras },
+      { name: "OpenCV", icon: SiOpencv },
+    ],
   },
   {
-    id: 8,
-    image: ssimage,
-    name: "React",
-  },
-  {
-    id: 9,
-    image: ssimage,
-    name: "React",
-  },
-  {id: 10,
-    image: ssimage,
-    name: "React",
+    category: "Tools",
+    skills: [
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
+      { name: "VS Code", icon: BiLogoVisualStudio },
+      { name: "Replit", icon: SiReplit  },
+      { name: "Jupyter ", icon: SiJupyter  },
+    ],
   },
 ];
-
-export default skill;

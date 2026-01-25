@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import ProjectsView from "./components/ProjectsView";
 import { Route, Routes } from "react-router";
 import Layout from "./components/Layout";
+import Copyright from "./components/Copyright";
 
 function App() {
   return (
@@ -28,8 +29,11 @@ function App() {
                 <Skills />
               </section>
 
-              <section id="experience">
+              <section id="career">
                 <Experience />
+              </section>
+              <section id="copyright">
+                <Copyright />
               </section>
             </>
           }

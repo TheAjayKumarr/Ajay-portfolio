@@ -17,49 +17,41 @@
 }
 
 .gradient-fade {
-  /* Remove default border and set height */
   border: none;
-  height: 1px; /* Adjust thickness as needed */
-  margin: 30px 0; /* Add some vertical spacing */
-  
-  /* Apply a linear gradient background */
+  height: 1px; 
+  margin: 30px 0; 
   background-image: linear-gradient(to right, 
-    rgba(0, 0, 0, 0) 0%,        /* Transparent at the start (left) */
-    rgba(255, 255, 255) 50%,     /* Solid color/opacity in the middle */
-    rgba(0, 0, 0, 0) 100%       /* Transparent at the end (right) */
+    rgba(0, 0, 0, 0) 0%,        
+    rgba(255, 255, 255) 50%,     
+    rgba(0, 0, 0, 0) 100%     
   )
 }
 .gradient-fade-bottom {
-  /* Remove default border and set height */
   border: none;
-  height: .5px; /* Adjust thickness as needed */
-  margin: 0 0 30px 0; /* Add some vertical spacing */
-  
-  /* Apply a linear gradient background */
+  height: .5px; 
+  margin: 0 0 30px 0; 
   background-image: linear-gradient(to right, 
-    rgba(0, 0, 0, 0) 0%,        /* Transparent at the start (left) */
-    rgba(255, 255, 255) 50%,     /* Solid color/opacity in the middle */
-    rgba(0, 0, 0, 0) 100%       /* Transparent at the end (right) */
+    rgba(0, 0, 0, 0) 0%,       
+    rgba(255, 255, 255) 50%,  
+    rgba(0, 0, 0, 0) 100%     
   )
 }
-
 .gradient-fade-top {
-  /* Remove default border and set height */
   border: none;
-  height: .5px; /* Adjust thickness as needed */
-  margin: 30px 0 0 0; /* Add some vertical spacing */
-  
-  /* Apply a linear gradient background */
+  height: .5px; 
+  margin: 30px 0 0 0; 
   background-image: linear-gradient(to right, 
-    rgba(0, 0, 0, 0) 0%,        /* Transparent at the start (left) */
-    rgba(255, 255, 255) 50%,     /* Solid color/opacity in the middle */
-    rgba(0, 0, 0, 0) 100%       /* Transparent at the end (right) */
+    rgba(0, 0, 0, 0) 0%,         
+    rgba(255, 255, 255) 50%,  
+    rgba(0, 0, 0, 0) 100%    
   )
 }
-
+.text-color{
+  color:#f6f3c2;
+}
 
 .back-color{
-  background-color: #ffffff;
+  background-color:#f6f3c2;
 }
 html {
   scroll-behavior: smooth;

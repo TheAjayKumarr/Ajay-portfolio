@@ -232,8 +232,8 @@ export default function DockMenu() {
     },
     {
       icon: <MdOutlineWorkHistory size={18} />,
-      label: "Experience",
-      onClick: () => scrollToSection("experience"),
+      label: "Career",
+      onClick: () => scrollToSection("career"),
     },
   ];
 
