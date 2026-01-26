@@ -1,16 +1,54 @@
-# React + Vite
+# 🚀 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website built to showcase my skills, projects, and experience as a **Frontend Developer / Aspiring Software Engineer**. The portfolio reflects my journey, hands-on projects, and continuous learning in web development and data-driven technologies.
 
-Currently, two official plugins are available:
+The website is designed with a clean, responsive UI and smooth navigation, focusing on clarity, usability, and performance. It serves as a central place to explore my work, technical stack, and professional background.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React, JavaScript, HTML, CSS  
+- **Styling:** Tailwind CSS, Bootstrap  
+- **Tools:** VS Code, Git, GitHub  
+- **UI & Assets:** React Icons, Canva  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- Responsive design for all screen sizes  
+- Interactive sections for **Skills, Projects, Experience & Education**  
+- Clean component-based architecture  
+- Fast, lightweight single-page application  
+
+---
+
+## 📂 Projects
+
+Each project listed includes:
+- Project description and goals  
+- Tech stack used  
+- GitHub repository links  
+
+---
+
+## 🎯 Purpose
+
+This portfolio represents my growth as a developer, my problem-solving mindset, and my ability to build real-world, scalable user interfaces.
+
+---
+
+## ©️ License & Copyright
+
+All **designs, layouts, UI components, custom animations, and original content** in this portfolio are **created and owned by me**.
+
+© Ajay Kumar. All rights reserved.
+
+No part of this website — including design, structure, or content — may be copied, modified, or redistributed without explicit permission.
+
+---
+
+## 📬 Contact
+
+Feel free to connect with me via LinkedIn or explore my GitHub for more projects and code.
