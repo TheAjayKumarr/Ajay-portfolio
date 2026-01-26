@@ -1,9 +1,12 @@
 {
   "name": "my-portfolio",
+  "homepage": "https://TheAjayKumarr.github.io/Ajay-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -21,6 +24,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.19",
+    "gh-pages": "^6.3.0",
     "gsap": "^3.14.2",
     "kute.js": "^2.2.4",
     "lucide-react": "^0.562.0",
