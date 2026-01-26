@@ -1,9 +1,31 @@
-import ssimage from "D:/AJAY/study/programming/Codes/ithon/Portfolio-Website/src/components/ssimage.jpeg";
 import CareerBlaze from "../assets/Career-Blaze.png";
 import Myntra from "../assets/Myntra.png";
 import E2H from"../assets/E2H.png";
+import epochessence from "../assets/epochessence.png";
+import historylifestyle from "../assets/historylifestyle.png";
 
 const projects = [
+  {
+    id: 4,
+    slug: "epochessence",
+    image: epochessence,
+    text: "This is a website on which I have worked as a freelencer.",
+    description:["Freelance Project","This is one my many projects that I have worked on as a Shopify Developer freelancer.","A fully functional Shopify e-commerce store for fragrance products, including homepage, product listings, UX design, and cart/checkout flow."],
+    tech: ["Shopify"],
+    name: "Epoch Essence",
+    type: "Shopify Dev",
+    live:"https://epochessence.com/",
+  },
+  {id: 5,
+    slug: "history-lifestyle",
+    image: historylifestyle,
+    text: "This is a website on which I have worked as a freelencer.",
+    description: ["Freelance Project","This is one my many projects that I have worked on as a Shopify Developer freelancer.","Developed and deployed HistoryLifestyle.in, a Shopify-based e-commerce store featuring home & lifestyle products, including category pages, product listings, and shopping cart functionality."],
+    tech: ["Shopify"],
+    name: "History lifestyle",
+    type: "Shopify Dev",
+    live:"https://historylifestyle.in/?srsltid=AfmBOoq5JbWwT2cHcW2NCtzmKKw7wvDnpcT8PE2GNEtQT8KhWswHzJSa",
+  },
   {
     id: 1,
     slug: "career-blaze",
@@ -47,29 +69,6 @@ const projects = [
     github: "https://github.com/TheAjayKumarr/English-to-Hindi-Neural-Translation-Model",
     name: "Translational Model",
     type: "Machine Learning",
-
-  },
-  {
-    id: 4,
-    slug: "portfolio-website",
-    image: ssimage,
-    text: "Check my project out",
-    description:["yo","this"],
-    tech: ["React", "Tailwind"],
-    github: "...",
-    name: "Career Blaze",
-    type: "Data Science",
-
-  },
-  {id: 5,
-    slug: "portfolio-website",
-    image: ssimage,
-    text: "Check my project out",
-    description: ["yo","this"],
-    tech: ["React", "Tailwind"],
-    github: "...",
-    name: "Career Blaze",
-    type: "Data Science",
 
   },
 ];

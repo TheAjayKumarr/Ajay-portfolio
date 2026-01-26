@@ -16,6 +16,7 @@ import {
   SiGit,
   SiReplit,
   SiJupyter,
+  SiShopify ,
 } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 
@@ -52,6 +53,7 @@ export const skillsData = [
       { name: "VS Code", icon: BiLogoVisualStudio },
       { name: "Replit", icon: SiReplit  },
       { name: "Jupyter ", icon: SiJupyter  },
+      { name: "Shopify  ", icon: SiShopify   },
     ],
   },
 ];

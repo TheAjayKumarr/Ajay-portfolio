@@ -3,11 +3,16 @@ import Ajay_2 from "../assets/Ajay_2.png";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuGithub } from "react-icons/lu";
 import { SlSocialLinkedin } from "react-icons/sl";
-import { MdMailOutline } from "react-icons/md";
+import { MdMailOutline, MdOutlineDescription } from "react-icons/md";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Hero() {
   const socials = [
+    {
+      icon: <MdOutlineDescription size={18} />,
+      label: "Resume",
+      onclick: () => window.open("/Ajay_Resume_Dev.pdf", "_blank"),
+    },
     {
       icon: <LuGithub size={18} />,
       label: "GitHub",
@@ -30,7 +35,7 @@ export default function Hero() {
   return (
     <section className="back-color overflow-hidden ">
       <div className="px-6 pt-32">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl text-gray-950">
           {/* ================= MOBILE ONLY ================= */}
           <div className="block lg:hidden">
             <div className="flex flex-col items-center gap-6">
@@ -243,15 +248,35 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className=" flex  justify-end gap-4  pb-8 ">
+              <div className="flex justify-end gap-4 pb-8">
                 {socials.map((item, index) => (
                   <button
                     key={index}
                     onClick={item.onclick}
-                    className="p-3 rounded-md border-black border hover:scale-110 transition-transform duration-300 hover:border-orange-500 hover:shadow-md hover:shadow-blue-900 custom-icon  "
+                    className="
+        relative group
+        p-3 rounded-md border-black border
+        hover:scale-110 transition-transform duration-300
+        hover:border-orange-500 hover:shadow-md hover:shadow-blue-900
+        custom-icon
+      "
                     aria-label={item.label}
                   >
                     {item.icon}
+
+                    {/* Tooltip */}
+                    <span
+                      className="
+          pointer-events-none
+          absolute -bottom-5 left-1/2 -translate-x-1/2
+          scale-0 group-hover:scale-100
+          transition-transform duration-200
+          rounded-md bg-gray-950 text-white text-xs
+          px-2 py-1 whitespace-nowrap
+        "
+                    >
+                      {item.label}
+                    </span>
                   </button>
                 ))}
               </div>

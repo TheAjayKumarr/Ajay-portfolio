@@ -30,7 +30,7 @@ const ProjectsView = () => {
                 className="rounded-xl w-screen"
               />
 
-              <div className="text-base text-gray-700">
+              <div className="text-base text-gray-400">
                 {project.description.map((para, index) => (
                   <p key={index} className="mb-4">
                     {para}
@@ -39,7 +39,7 @@ const ProjectsView = () => {
               </div>
 
               {project.tech && (
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap text-color gap-2">
                   {project.tech.map((item) => (
                     <span
                       key={item}
@@ -57,7 +57,7 @@ const ProjectsView = () => {
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="border px-4 py-2 rounded-lg hover:text-orange-500"
+                    className="border px-4 py-2 text-color rounded-lg hover:text-orange-500"
                   >
                     GitHub
                   </a>
@@ -67,7 +67,7 @@ const ProjectsView = () => {
                     href={project.live}
                     target="_blank"
                     rel="noreferrer"
-                    className="border px-4 py-2 rounded-lg hover:text-orange-500"
+                    className="border px-4 py-2 text-color rounded-lg hover:text-orange-500"
                   >
                     Live Demo
                   </a>
@@ -130,7 +130,7 @@ const ProjectsView = () => {
                     href={project.live}
                     target="_blank"
                     rel="noreferrer"
-                    className="border px-6 py-3 rounded-lg text-color hover:text-orange-500 transition"
+                    className="border px-6 py-3 text-2xl rounded-lg text-color hover:border-orange-500 hover:text-orange-500 transition"
                   >
                     Live Project
                   </a>

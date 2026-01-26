@@ -4,7 +4,7 @@ function Experience() {
   const [activeTab, setActiveTab] = useState("experience");
 
   return (
-    <div className="overflow-hidden bg-gray-950 text-color min-h-[600px]">
+    <div className="overflow-hidden bg-gray-950 text-color min-h-[700px]">
       <div className="max-w-4xl m-auto mt-4 mb-4 pb-2 ">
         <div className="max-w-3xl flex justify-center m-auto text-4xl lg:text-6xl font-extrabold uppercase pb-12 pt-16 bbh-bartle-regular">
           <p className="text-orange-500">Career</p>
@@ -39,6 +39,20 @@ function Experience() {
           {activeTab === "experience" && (
             <div className="space-y-4">
               <div>
+                <hr className="gradient-fade " />
+                <div className="grid grid-cols-3 mb-1.5">
+                  <h3 className="col-span-2 text-xl">
+                    {" "}
+                    <strong>Shopify Developer</strong>
+                  </h3>
+                  <p className="justify-end text-end">May 2025</p>
+                </div>
+
+                <div className="grid grid-cols-2 ">
+                  <h3> Freelance </h3>
+                  <p className="justify-end text-end">Remote</p>
+                </div>
+
                 <hr className="gradient-fade" />
                 <div className="grid grid-cols-3 mb-1.5">
                   <h3 className="col-span-2 text-xl">
@@ -88,13 +102,26 @@ function Experience() {
                   <p className="justify-end text-end">2020 - 2024</p>
                 </div>
 
-                <div className="grid grid-cols-3 ">
-                  <h3 className="col-span-2">
+                <div className="">
+                  <h3 className="">
                     {" "}
                     Bharati Vidyapeeth Deemed University College of Engineering,
                     Pune, Maharashtra, India
                   </h3>
-                  <p className="justify-end text-end">8.63 CGPA </p>
+                </div>
+
+                <hr className="gradient-fade" />
+
+                <div className="grid grid-cols-3 mb-1.5">
+                  <h3 className="col-span-2 text-xl">
+                    {" "}
+                    <strong>12th- PCM</strong>
+                  </h3>
+                  <p className="justify-end text-end">2018 - 2019</p>
+                </div>
+
+                <div className=" ">
+                  <h3 className=""> Army Public School, MHOW</h3>
                 </div>
 
                 <hr className="gradient-fade" />
