@@ -10,7 +10,7 @@ const projects = [
     slug: "epochessence",
     image: epochessence,
     text: "This is a website on which I have worked as a freelencer.",
-    description:["Freelance Project","This is one my many projects that I have worked on as a Shopify Developer freelancer.","A fully functional Shopify e-commerce store for fragrance products, including homepage, product listings, UX design, and cart/checkout flow."],
+    description:["Freelance Project","This is one of the many projects I have worked on as a freelance Shopify Developer.","A fully functional Shopify e-commerce store for fragrance products, including homepage, product listings, UX design, and cart/checkout flow."],
     tech: ["Shopify"],
     name: "Epoch Essence",
     type: "Shopify Dev",
@@ -20,7 +20,7 @@ const projects = [
     slug: "history-lifestyle",
     image: historylifestyle,
     text: "This is a website on which I have worked as a freelencer.",
-    description: ["Freelance Project","This is one my many projects that I have worked on as a Shopify Developer freelancer.","Developed and deployed HistoryLifestyle.in, a Shopify-based e-commerce store featuring home & lifestyle products, including category pages, product listings, and shopping cart functionality."],
+    description: ["Freelance Project","This is one of the many projects I have worked on as a freelance Shopify Developer.","Developed and deployed HistoryLifestyle.in, a Shopify-based e-commerce store featuring home & lifestyle products, including category pages, product listings, and shopping cart functionality."],
     tech: ["Shopify"],
     name: "History lifestyle",
     type: "Shopify Dev",
@@ -48,7 +48,6 @@ const projects = [
     
     "Overall, this clone project allowed me to practice structuring a larger application, manage state effectively, and think through user interactions in a way that goes beyond simple static pages. It’s a great example of how I can build functional, visually appealing web applications inspired by real world products like major e-commerce platforms such as Myntra."],
     tech: ["React.js", "Tailwind","HTML","CSS","VScode","Bootstrap","node.js","react-dom","react-icons","react-redux","react-router"],
-    github: "...",
     name: "Myntra Clone",
     type: "Frontend Dev",
 

@@ -15,6 +15,16 @@
   width:400px;
   height:400px;
 }
+.gradient-fade-inverse {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(3, 7, 18, 1),
+    rgba(0, 0, 0, 0)
+  );
+}
 
 .gradient-fade {
   border: none;
@@ -50,8 +60,15 @@
   color:#f6f3c2;
 }
 
+body {
+  background-color: #f6f3c2; /* or your main theme bg */
+}
 .back-color{
   background-color:#f6f3c2;
+}
+.darkback-color{
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 7 18 / var(--tw-bg-opacity, 1)) /* #030712 */;
 }
 html {
   scroll-behavior: smooth;

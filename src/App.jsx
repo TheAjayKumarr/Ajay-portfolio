@@ -7,6 +7,7 @@ import ProjectsView from "./components/ProjectsView";
 import { Route, Routes } from "react-router";
 import Layout from "./components/Layout";
 import Copyright from "./components/Copyright";
+import Container from "./components/container";
 
 function App() {
   return (
@@ -18,22 +19,32 @@ function App() {
           element={
             <>
               <section id="intro">
-                <Hero />
+                <Container>
+                  <Hero />
+                </Container>
               </section>
 
-              <section id="projects">
-                <Projects />
+              <section id="projects" className="darkback-color overflow-hidden">
+                <Container>
+                  <Projects />
+                </Container>
               </section>
 
               <section id="skills">
-                <Skills />
+                <Container>
+                  <Skills />
+                </Container>
               </section>
 
-              <section id="career">
-                <Experience />
+              <section id="career" className="darkback-color overflow-hidden">
+                <Container>
+                  <Experience />
+                </Container>
               </section>
               <section id="copyright">
-                <Copyright />
+                <Container>
+                  <Copyright />
+                </Container>
               </section>
             </>
           }

@@ -30,7 +30,6 @@ const ProjectItems = ({
   };
 
   const position = isFirst ? "first" : isLast ? "last" : "middle";
-
   const { top, bottom } = hrStyles[position];
 
   return (
@@ -38,9 +37,26 @@ const ProjectItems = ({
       <LinkPreviewer href={href} image={image} text={text}>
         <hr className={top} />
 
-        <div className="grid grid-cols-2 max-w-3xl m-auto gap-5 text-justify">
-          <h2 className="text-4xl font-semibold flex justify-start">{name}</h2>
-          <p className="text-xl font-semibold flex justify-end items-end">
+        <div className="
+          grid grid-cols-1 sm:grid-cols-2
+          max-w-3xl mx-auto
+          gap-2 sm:gap-5
+          px-4 sm:px-0
+          place-items-center sm:place-items-stretch
+        ">
+          <h2 className="
+            text-2xl sm:text-3xl md:text-4xl
+            font-semibold
+            text-center sm:text-left
+          ">
+            {name}
+          </h2>
+
+          <p className="
+            text-base sm:text-lg md:text-xl
+            font-semibold
+            text-center sm:text-right
+          ">
             {type}
           </p>
         </div>

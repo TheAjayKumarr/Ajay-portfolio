@@ -18,9 +18,9 @@ const ProjectsView = () => {
       <div className="px-4 pb-16 pt-10">
         <div className="mx-auto max-w-7xl">
           {/* ================= MOBILE ================= */}
-          <div className="block lg:hidden">
-            <div className="flex flex-col gap-6">
-              <h1 className="text-4xl font-extrabold uppercase text-center">
+          <div className="block lg:hidden darkback-color">
+            <div className="flex flex-col pt-12 gap-6">
+              <h1 className="text-4xl text-orange-500 font-extrabold uppercase text-center">
                 {project.name}
               </h1>
 
@@ -30,7 +30,7 @@ const ProjectsView = () => {
                 className="rounded-xl w-screen"
               />
 
-              <div className="text-base text-gray-400">
+              <div className="text-base text-justify text-gray-400">
                 {project.description.map((para, index) => (
                   <p key={index} className="mb-4">
                     {para}
@@ -39,7 +39,7 @@ const ProjectsView = () => {
               </div>
 
               {project.tech && (
-                <div className="flex flex-wrap text-color gap-2">
+                <div className="flex flex-wrap justify-center text-color gap-2">
                   {project.tech.map((item) => (
                     <span
                       key={item}
@@ -51,7 +51,7 @@ const ProjectsView = () => {
                 </div>
               )}
 
-              <div className="flex gap-4 mt-4">
+              <div className="flex gap-4 mt-4 justify-center">
                 {project.github && (
                   <a
                     href={project.github}
@@ -77,7 +77,7 @@ const ProjectsView = () => {
           </div>
 
           {/* ================= DESKTOP ================= */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block darkback-color">
             <div className="max-w-4xl pt-12 m-auto ">
               <div className="bbh-bartle-regular">
                 <p className="text-orange-500 text-center text-6xl font-extrabold uppercase">
