@@ -57,14 +57,14 @@
   )
 }
 .text-color{
-  color:#f6f3c2;
+  color: #ffeddf;
 }
 
 body {
-  background-color: #f6f3c2; /* or your main theme bg */
+  background-color:  #ffeddf; /* or your main theme bg */
 }
 .back-color{
-  background-color:#f6f3c2;
+  background-color: #ffeddf;
 }
 .darkback-color{
   --tw-bg-opacity: 1;
